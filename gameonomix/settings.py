@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)c!)58=+*3i$6stkrvhlv4tx8w=&u&4^!c@ink_mcw8&-b=h*5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost']
+ALLOWED_HOSTS = ['localhost','gameonomix.herokuapp.com']
 
 
 # Application definition
