@@ -54,7 +54,7 @@ def api_home(request, *args, **kwargs):
             if frac==0:
                 scoreaverage=scorelow
             else:
-                scoreaverage=(frac*scorelow)+((1-frac)*scorehigh)
+                scoreaverage=((1-frac)*scorelow)+(frac*scorehigh)
             return JsonResponse({"target score": scoreaverage})
     except:
         pass
