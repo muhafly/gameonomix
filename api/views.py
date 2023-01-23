@@ -48,12 +48,6 @@ def api_home(request, *args, **kwargs):
         if data:
             level=data['level']
             habit=data['habit']
-            if level<1:
-                level=1
-            if habit<1:
-                habit=1
-            if habit>30:
-                habit=30
             frac, whole = math.modf(habit)
             scorelow=scores_array[round(level)-1][math.floor(habit)-1]
             scorehigh=scores_array[round(level)-1][math.ceil(habit)-1]
