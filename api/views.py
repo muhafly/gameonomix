@@ -48,9 +48,13 @@ def api_home(request, *args, **kwargs):
         if data:
             level=data['level']
             habit=data['habit']
+            frac, whole = math.modf(habit)
             scorelow=scores_array[round(level)-1][math.floor(habit)-1]
             scorehigh=scores_array[round(level)-1][math.ceil(habit)-1]
-            scoreaverage=(scorelow+scorehigh)/2
+            if frac==0:
+                scoreaverage=scorelow
+            else:
+                scoreaverage=(frac*scorelow)+((1-frac)*scorehigh)
             return JsonResponse({"target score": scoreaverage})
     except:
         pass
