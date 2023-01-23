@@ -51,7 +51,7 @@ def api_home(request, *args, **kwargs):
             scorelow=scores_array[round(level)-1][math.floor(habit)-1]
             scorehigh=scores_array[round(level)-1][math.ceil(habit)-1]
             scoreaverage=(scorelow+scorehigh)/2
-            return JsonResponse({"target score": score})
+            return JsonResponse({"target score": scoreaverage})
     except:
         pass
     
