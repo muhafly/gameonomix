@@ -2,8 +2,6 @@ import json
 import math
 import numpy as np
 from django.http import JsonResponse
-level_array = [1,2,3,4,5]
-habit_array = [1,2,3,4,5]
 scores_array=[[100,	200,	300,	400,	500,	600,	700,	800,	900,	1000],
                 [202.2222222,	411.1111111,	600,	813.3333333,	1000,	1222.222222,	1422.222222,	1642.222222,	1822.222222,	2022.222222],
                 [306.6666667,	633.3333333,	900,	1240,	1500,	1866.666667,	2166.666667,	2526.666667,	2766.666667,	3066.666667],
@@ -50,7 +48,9 @@ def api_home(request, *args, **kwargs):
         if data:
             level=data['level']
             habit=data['habit']
-            score=scores_array[level-1][habit-1]
+            scorelow=scores_array[round(level)-1][math.floor(habit)-1]
+            scorehigh=scores_array[round(level)-1][math.ceil(habit)-1]
+            scoreaverage=(scorelow+scorehigh)/2
             return JsonResponse({"target score": score})
     except:
         pass
