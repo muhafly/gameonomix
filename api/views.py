@@ -16,7 +16,7 @@ def api_home(request, *args, **kwargs):
     level=0
     habit=0
     event_read=0
-    economic_model=0
+    scores_array=0
     score=0
     try:
         data=json.loads(request.body)
