@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)c!)58=+*3i$6stkrvhlv4tx8w=&u&4^!c@ink_mcw8&-b=h*5
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','gameonomix.herokuapp.com','gameonomix.com','api.gameonomix.com','gameonomix.up.railway.app']
-CSRF_TRUSTED_ORIGINS = ALLOWED_HOSTS
+CSRF_TRUSTED_ORIGINS = ['https://*.gameonomix.com','https://*.127.0.0.1']
 
 # Application definition
 
