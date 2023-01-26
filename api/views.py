@@ -43,8 +43,8 @@ def api_home(request, *args, **kwargs):
                 scoreaverage=scorelow
             else:
                 scoreaverage=((1-frac)*scorelow)+(frac*scorehigh)
-            return JsonResponse({"target score": scoreaverage,"input_level":level,"input_habit":habit,"input_event":event_read,"model":economic_model})
+            return JsonResponse({"target score": scoreaverage,"input_level":level,"input_habit":habit,"input_event":event_read,"model":scores_array})
     except:
         pass
     
-    return JsonResponse({"input_level":level,"input_habit":habit,"input_event":event_read,"model":economic_model})
+    return JsonResponse({"input_level":level,"input_habit":habit,"input_event":event_read,"model":scores_array})
