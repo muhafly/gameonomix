@@ -13,6 +13,10 @@ def find_nearest(array,value):
     
 def api_home(request, *args, **kwargs):
     data=None
+    level=0
+    habit=0
+    event_read=0
+    economic_model=0
     score=0
     try:
         data=json.loads(request.body)
