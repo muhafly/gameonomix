@@ -1,7 +1,7 @@
 import requests
 import time
 endpoint = "http://gameonomix.com/"
-endpoint = "http://localhost:8000/"
+# endpoint = "http://localhost:8000/"
 tic = time.perf_counter()
 get_response = requests.get(endpoint, json={"level": 9, "habit": 3.2, "event": 1})
 toc = time.perf_counter()

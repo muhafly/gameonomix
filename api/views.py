@@ -43,4 +43,4 @@ def api_home(request, *args, **kwargs):
     except:
         pass
     
-    return JsonResponse({"message":"This is the the amazing gameonomics platform. Please provied a level and a habit in json format to get the target score!"})
+    return JsonResponse({"input_level":level,"input_habit":habit,"input_event":event_read,"model":economic_model})
