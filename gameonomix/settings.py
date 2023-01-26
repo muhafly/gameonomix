@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)c!)58=+*3i$6stkrvhlv4tx8w=&u&4^!c@ink_mcw8&-b=h*5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost','gameonomix.herokuapp.com','gameonomix.com','api.gameonomix.com']
+ALLOWED_HOSTS = ['localhost','gameonomix.herokuapp.com','gameonomix.com','api.gameonomix.com','gameonomix.up.railway.app']
 
 
 # Application definition
