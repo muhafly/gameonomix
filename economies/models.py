@@ -22,4 +22,4 @@ class EconomicModel(models.Model):
     last_updated = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return self.economic_model.title
+        return self.event.title
